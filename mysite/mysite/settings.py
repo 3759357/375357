@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-wtj)o-z880)ehz((v+&rge6a1(vtj(^#al40((=$p@w8342oh!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".ap-northeast-2.compute.amazonaws.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'food'
 ]
 
 MIDDLEWARE = [
