@@ -21,4 +21,5 @@ urlpatterns = [
     path('food', include('food.urls')),
     path('blog', include('blog.url')),
     path('', include('single_pages.url')),
+    path('user_test',include('user_test.urls'))
 ]
