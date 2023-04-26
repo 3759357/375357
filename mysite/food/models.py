@@ -1,16 +1,17 @@
 from django.db import models
 
 # Create your models here.
-from django.db import models
+
+class food(models.Model):
+    food_name = models.CharField(db_column='food_name', max_length=50, default=0)
+    serving_size = models.IntegerField(db_column='serving_size', default=0)
+    calories = models.IntegerField(db_column='calories', default=0)
+    carbon = models.IntegerField(db_column='carbon', default=0)
+    protein = models.IntegerField(db_column='protein', default=0)
+    fat = models.IntegerField(db_column='fat', default=0)
+    cholesterol = models.IntegerField(db_column='cholesterol', default=0)
 
 
-class Question(models.Model):
-    subject = models.CharField(max_length=200)
-    content = models.TextField()
-    create_date = models.DateTimeField()
-
-
-class Answer(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    content = models.TextField()
-    create_date = models.DateTimeField()
+    class Meta:
+        #        managed = False
+        db_table = 'food'

@@ -80,3 +80,14 @@ def member_login(request):
 def member_logout(request):
     request.session.flush()
     return redirect('/user_test')
+
+def user_list(request):
+    users = Member.objects.all().order_by('pk')
+
+    return render(
+        request,
+        'user_test/list.html',
+        {
+            'users': users,
+        }
+    )
