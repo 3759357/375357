@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import food
 
-class foodSerializer(serializers.ModelSerializer):
+class foodSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = food
-        fields = ('title', 'text')
+        fields = '__all__'
